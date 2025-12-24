@@ -8,11 +8,31 @@ import gallery4 from "@/assets/gallery-4.jpeg";
 import gallery5 from "@/assets/gallery-5.jpeg";
 import gallery6 from "@/assets/gallery-6.jpeg";
 import gallery7 from "@/assets/gallery-7.jpeg";
+import gallery8 from "@/assets/gallery-8.jpeg";
+import gallery9 from "@/assets/gallery-9.jpeg";
+import gallery10 from "@/assets/gallery-10.jpeg";
+import gallery11 from "@/assets/gallery-11.jpeg";
+import gallery12 from "@/assets/gallery-12.jpeg";
+import gallery13 from "@/assets/gallery-13.jpeg";
+import gallery14 from "@/assets/gallery-14.jpeg";
+import gallery15 from "@/assets/gallery-15.jpeg";
+import gallery16 from "@/assets/gallery-16.jpeg";
+import gallery17 from "@/assets/gallery-17.jpeg";
 import profileMain from "@/assets/profile-main.jpeg";
 
 const galleryImages = [
   { src: profileMain, alt: "Dr. Sohag Talukder in surgical scrubs", category: "Clinical" },
+  { src: gallery17, alt: "Dr. Sohag Talukder at histopathology laboratory with microscope", category: "Research" },
   { src: gallery4, alt: "Veterinary consultation with cat at Vet Care Center", category: "Clinical" },
+  { src: gallery8, alt: "Caring for rabbit patient", category: "Clinical" },
+  { src: gallery9, alt: "Wildlife consultation with peacock", category: "Wildlife" },
+  { src: gallery10, alt: "With white kitten patients at clinic", category: "Clinical" },
+  { src: gallery11, alt: "With Persian cat patient", category: "Clinical" },
+  { src: gallery12, alt: "Caring for orange cat", category: "Clinical" },
+  { src: gallery13, alt: "With white kittens at clinic", category: "Clinical" },
+  { src: gallery14, alt: "With white Persian cat patient", category: "Clinical" },
+  { src: gallery15, alt: "With German Shepherd dog", category: "Canine" },
+  { src: gallery16, alt: "Surgical procedures portfolio", category: "Surgery" },
   { src: gallery5, alt: "Caring for kitten patient", category: "Clinical" },
   { src: gallery1, alt: "Documentation and clinical notes", category: "Clinical" },
   { src: gallery2, alt: "Examining cat patient with stethoscope", category: "Clinical" },
