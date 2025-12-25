@@ -55,6 +55,9 @@ export function Navigation() {
             <img
               src={logo}
               alt="VetSohag Logo"
+              width={127}
+              height={40}
+              fetchPriority="high"
               className="h-10 md:h-12 w-auto"
             />
           </a>

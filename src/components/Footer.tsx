@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Name */}
           <div className="flex items-center gap-3">
-            <img src={logo} alt="VetSohag Logo" className="h-10 w-auto brightness-0 invert" />
+            <img src={logo} alt="VetSohag Logo" width={127} height={40} loading="lazy" className="h-10 w-auto brightness-0 invert" />
             <div>
               <p className="font-serif font-bold text-lg">Dr. Sohag Talukder</p>
               <p className="text-sm text-background/70">Veterinary Surgeon & Biomedical Researcher</p>

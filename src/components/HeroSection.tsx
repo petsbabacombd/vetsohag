@@ -71,7 +71,7 @@ export function HeroSection() {
               
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-elevated">
-                <img src={profileImage} alt="Dr. Sohag Talukder - Veterinary Surgeon and Biomedical Researcher" className="w-full h-full object-cover object-top" />
+                <img src={profileImage} alt="Dr. Sohag Talukder - Veterinary Surgeon and Biomedical Researcher" width={384} height={384} fetchPriority="high" className="w-full h-full object-cover object-top" />
               </div>
               
               {/* Floating badges */}
