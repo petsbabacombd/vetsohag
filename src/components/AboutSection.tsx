@@ -31,6 +31,12 @@ const credentials = [
     subtitle: "Consultant & Surgeon",
     detail: "Since 2022",
   },
+  {
+    icon: Users,
+    title: "European Society of Veterinary Nephrology and Urology",
+    subtitle: "Professional Member",
+    detail: "ESVNU Member",
+  },
 ];
 
 export function AboutSection() {
