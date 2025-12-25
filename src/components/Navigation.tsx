@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png?format=webp";
 
 const navLinks = [
   { href: "#about", label: "About" },

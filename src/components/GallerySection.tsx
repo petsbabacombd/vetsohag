@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.png";
-import gallery3 from "@/assets/gallery-3.png";
+import gallery1 from "@/assets/gallery-1.jpg?format=webp";
+import gallery2 from "@/assets/gallery-2.png?format=webp";
+import gallery3 from "@/assets/gallery-3.png?format=webp";
 import gallery4 from "@/assets/gallery-4.jpeg";
 import gallery5 from "@/assets/gallery-5.jpeg";
 import gallery6 from "@/assets/gallery-6.jpeg";
