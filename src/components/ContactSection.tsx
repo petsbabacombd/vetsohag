@@ -122,9 +122,8 @@ export function ContactSection() {
                 translational biomedical research.
               </p>
               <Button
-                variant="outline"
                 size="lg"
-                className="w-full border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="w-full bg-white text-primary hover:bg-white/90 font-semibold"
                 onClick={openWhatsAppResearch}
               >
                 <Mail className="w-5 h-5" />
@@ -148,9 +147,8 @@ export function ContactSection() {
                 for your pets or livestock.
               </p>
               <Button
-                variant="outline"
                 size="lg"
-                className="w-full border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent"
+                className="w-full bg-white text-accent hover:bg-white/90 font-semibold"
                 onClick={openWhatsAppConsultation}
               >
                 <Phone className="w-5 h-5" />
