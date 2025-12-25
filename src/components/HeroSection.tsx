@@ -90,6 +90,15 @@ export function HeroSection() {
                   <span className="text-sm font-medium">ASM Member</span>
                 </div>
               </div>
+              
+              <div className="absolute -right-2 bottom-1/3 bg-background rounded-xl shadow-card px-4 py-3 border border-border/50 animate-float" style={{
+              animationDelay: "2s"
+            }}>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-accent rounded-full" />
+                  <span className="text-sm font-medium">ESVNU Member</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
