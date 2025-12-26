@@ -1,6 +1,8 @@
 import { Button } from "./ui/button";
 import { ArrowRight, FlaskConical, Stethoscope } from "lucide-react";
-import profileImage from "@/assets/profile-main.jpeg";
+import profileImageSm from "@/assets/profile-main.jpeg?w=256&format=webp";
+import profileImageMd from "@/assets/profile-main.jpeg?w=320&format=webp";
+import profileImageLg from "@/assets/profile-main.jpeg?w=384&format=webp";
 export function HeroSection() {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -39,9 +41,9 @@ export function HeroSection() {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-4 opacity-0 animate-fade-up stagger-2">
-              <span className="font-semibold text-foreground">Expert Pet Surgeon</span> |{" "}
+              <span className="font-semibold text-foreground">Expert Pet Surgeon</span> |{" "}
               <span className="font-semibold text-foreground">Biomedical Researcher</span> |{" "}
-              <span className="font-semibold text-foreground">Expert on Feline Liver, Kidney | </span>
+              <span className="font-semibold text-foreground">Expert on Feline Liver, Kidney | </span>
             </p>
             
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-xl opacity-0 animate-fade-up stagger-3">
@@ -71,7 +73,16 @@ export function HeroSection() {
               
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-elevated">
-                <img src={profileImage} alt="Dr. Sohag Talukder - Veterinary Surgeon and Biomedical Researcher" width={384} height={384} fetchPriority="high" className="w-full h-full object-cover object-top" />
+                <img 
+                  srcSet={`${profileImageSm} 256w, ${profileImageMd} 320w, ${profileImageLg} 384w`}
+                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+                  src={profileImageLg} 
+                  alt="Dr. Sohag Talukder - Veterinary Surgeon and Biomedical Researcher" 
+                  width={384} 
+                  height={384} 
+                  fetchPriority="high" 
+                  className="w-full h-full object-cover object-top" 
+                />
               </div>
               
               {/* Floating badges */}
