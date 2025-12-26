@@ -1,44 +1,84 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { LazyImage } from "./LazyImage";
 
-import gallery1 from "@/assets/gallery-1.jpg?format=webp";
-import gallery2 from "@/assets/gallery-2.png?format=webp";
-import gallery3 from "@/assets/gallery-3.png?format=webp";
-import gallery4 from "@/assets/gallery-4.jpeg";
-import gallery5 from "@/assets/gallery-5.jpeg";
-import gallery6 from "@/assets/gallery-6.jpeg";
-import gallery7 from "@/assets/gallery-7.jpeg";
-import gallery8 from "@/assets/gallery-8.jpeg";
-import gallery9 from "@/assets/gallery-9.jpeg";
-import gallery10 from "@/assets/gallery-10.jpeg";
-import gallery11 from "@/assets/gallery-11.jpeg";
-import gallery12 from "@/assets/gallery-12.jpeg";
-import gallery13 from "@/assets/gallery-13.jpeg";
-import gallery14 from "@/assets/gallery-14.jpeg";
-import gallery15 from "@/assets/gallery-15.jpeg";
-import gallery16 from "@/assets/gallery-16.jpeg";
-import gallery17 from "@/assets/gallery-17.jpeg";
-import profileMain from "@/assets/profile-main.jpeg";
+// Optimized WebP images with responsive sizes
+import gallery1 from "@/assets/gallery-1.jpg?w=400&format=webp";
+import gallery1Thumb from "@/assets/gallery-1.jpg?w=40&format=webp";
+import gallery2 from "@/assets/gallery-2.png?w=400&format=webp";
+import gallery2Thumb from "@/assets/gallery-2.png?w=40&format=webp";
+import gallery3 from "@/assets/gallery-3.png?w=400&format=webp";
+import gallery3Thumb from "@/assets/gallery-3.png?w=40&format=webp";
+import gallery4 from "@/assets/gallery-4.jpeg?w=400&format=webp";
+import gallery4Thumb from "@/assets/gallery-4.jpeg?w=40&format=webp";
+import gallery5 from "@/assets/gallery-5.jpeg?w=400&format=webp";
+import gallery5Thumb from "@/assets/gallery-5.jpeg?w=40&format=webp";
+import gallery6 from "@/assets/gallery-6.jpeg?w=400&format=webp";
+import gallery6Thumb from "@/assets/gallery-6.jpeg?w=40&format=webp";
+import gallery7 from "@/assets/gallery-7.jpeg?w=400&format=webp";
+import gallery7Thumb from "@/assets/gallery-7.jpeg?w=40&format=webp";
+import gallery8 from "@/assets/gallery-8.jpeg?w=400&format=webp";
+import gallery8Thumb from "@/assets/gallery-8.jpeg?w=40&format=webp";
+import gallery9 from "@/assets/gallery-9.jpeg?w=400&format=webp";
+import gallery9Thumb from "@/assets/gallery-9.jpeg?w=40&format=webp";
+import gallery10 from "@/assets/gallery-10.jpeg?w=400&format=webp";
+import gallery10Thumb from "@/assets/gallery-10.jpeg?w=40&format=webp";
+import gallery11 from "@/assets/gallery-11.jpeg?w=400&format=webp";
+import gallery11Thumb from "@/assets/gallery-11.jpeg?w=40&format=webp";
+import gallery12 from "@/assets/gallery-12.jpeg?w=400&format=webp";
+import gallery12Thumb from "@/assets/gallery-12.jpeg?w=40&format=webp";
+import gallery13 from "@/assets/gallery-13.jpeg?w=400&format=webp";
+import gallery13Thumb from "@/assets/gallery-13.jpeg?w=40&format=webp";
+import gallery14 from "@/assets/gallery-14.jpeg?w=400&format=webp";
+import gallery14Thumb from "@/assets/gallery-14.jpeg?w=40&format=webp";
+import gallery15 from "@/assets/gallery-15.jpeg?w=400&format=webp";
+import gallery15Thumb from "@/assets/gallery-15.jpeg?w=40&format=webp";
+import gallery16 from "@/assets/gallery-16.jpeg?w=400&format=webp";
+import gallery16Thumb from "@/assets/gallery-16.jpeg?w=40&format=webp";
+import gallery17 from "@/assets/gallery-17.jpeg?w=400&format=webp";
+import gallery17Thumb from "@/assets/gallery-17.jpeg?w=40&format=webp";
+import profileMain from "@/assets/profile-main.jpeg?w=400&format=webp";
+import profileMainThumb from "@/assets/profile-main.jpeg?w=40&format=webp";
+
+// Full size images for lightbox
+import gallery1Full from "@/assets/gallery-1.jpg?format=webp";
+import gallery2Full from "@/assets/gallery-2.png?format=webp";
+import gallery3Full from "@/assets/gallery-3.png?format=webp";
+import gallery4Full from "@/assets/gallery-4.jpeg?format=webp";
+import gallery5Full from "@/assets/gallery-5.jpeg?format=webp";
+import gallery6Full from "@/assets/gallery-6.jpeg?format=webp";
+import gallery7Full from "@/assets/gallery-7.jpeg?format=webp";
+import gallery8Full from "@/assets/gallery-8.jpeg?format=webp";
+import gallery9Full from "@/assets/gallery-9.jpeg?format=webp";
+import gallery10Full from "@/assets/gallery-10.jpeg?format=webp";
+import gallery11Full from "@/assets/gallery-11.jpeg?format=webp";
+import gallery12Full from "@/assets/gallery-12.jpeg?format=webp";
+import gallery13Full from "@/assets/gallery-13.jpeg?format=webp";
+import gallery14Full from "@/assets/gallery-14.jpeg?format=webp";
+import gallery15Full from "@/assets/gallery-15.jpeg?format=webp";
+import gallery16Full from "@/assets/gallery-16.jpeg?format=webp";
+import gallery17Full from "@/assets/gallery-17.jpeg?format=webp";
+import profileMainFull from "@/assets/profile-main.jpeg?format=webp";
 
 const galleryImages = [
-  { src: profileMain, alt: "Dr. Sohag Talukder in surgical scrubs", category: "Clinical" },
-  { src: gallery17, alt: "Dr. Sohag Talukder at histopathology laboratory with microscope", category: "Research" },
-  { src: gallery4, alt: "Veterinary consultation with cat at Vet Care Center", category: "Clinical" },
-  { src: gallery8, alt: "Caring for rabbit patient", category: "Clinical" },
-  { src: gallery9, alt: "Wildlife consultation with peacock", category: "Wildlife" },
-  { src: gallery10, alt: "With white kitten patients at clinic", category: "Clinical" },
-  { src: gallery11, alt: "With Persian cat patient", category: "Clinical" },
-  { src: gallery12, alt: "Caring for orange cat", category: "Clinical" },
-  { src: gallery13, alt: "With white kittens at clinic", category: "Clinical" },
-  { src: gallery14, alt: "With white Persian cat patient", category: "Clinical" },
-  { src: gallery15, alt: "With German Shepherd dog", category: "Canine" },
-  { src: gallery16, alt: "Surgical procedures portfolio", category: "Surgery" },
-  { src: gallery5, alt: "Caring for kitten patient", category: "Clinical" },
-  { src: gallery1, alt: "Documentation and clinical notes", category: "Clinical" },
-  { src: gallery2, alt: "Examining cat patient with stethoscope", category: "Clinical" },
-  { src: gallery3, alt: "Surgical procedure at Vet Care Center", category: "Clinical" },
-  { src: gallery6, alt: "Working with pheasant bird", category: "Wildlife" },
-  { src: gallery7, alt: "Treating bird patient", category: "Avian" },
+  { src: profileMain, thumb: profileMainThumb, full: profileMainFull, alt: "Dr. Sohag Talukder in surgical scrubs", category: "Clinical" },
+  { src: gallery17, thumb: gallery17Thumb, full: gallery17Full, alt: "Dr. Sohag Talukder at histopathology laboratory with microscope", category: "Research" },
+  { src: gallery4, thumb: gallery4Thumb, full: gallery4Full, alt: "Veterinary consultation with cat at Vet Care Center", category: "Clinical" },
+  { src: gallery8, thumb: gallery8Thumb, full: gallery8Full, alt: "Caring for rabbit patient", category: "Clinical" },
+  { src: gallery9, thumb: gallery9Thumb, full: gallery9Full, alt: "Wildlife consultation with peacock", category: "Wildlife" },
+  { src: gallery10, thumb: gallery10Thumb, full: gallery10Full, alt: "With white kitten patients at clinic", category: "Clinical" },
+  { src: gallery11, thumb: gallery11Thumb, full: gallery11Full, alt: "With Persian cat patient", category: "Clinical" },
+  { src: gallery12, thumb: gallery12Thumb, full: gallery12Full, alt: "Caring for orange cat", category: "Clinical" },
+  { src: gallery13, thumb: gallery13Thumb, full: gallery13Full, alt: "With white kittens at clinic", category: "Clinical" },
+  { src: gallery14, thumb: gallery14Thumb, full: gallery14Full, alt: "With white Persian cat patient", category: "Clinical" },
+  { src: gallery15, thumb: gallery15Thumb, full: gallery15Full, alt: "With German Shepherd dog", category: "Canine" },
+  { src: gallery16, thumb: gallery16Thumb, full: gallery16Full, alt: "Surgical procedures portfolio", category: "Surgery" },
+  { src: gallery5, thumb: gallery5Thumb, full: gallery5Full, alt: "Caring for kitten patient", category: "Clinical" },
+  { src: gallery1, thumb: gallery1Thumb, full: gallery1Full, alt: "Documentation and clinical notes", category: "Clinical" },
+  { src: gallery2, thumb: gallery2Thumb, full: gallery2Full, alt: "Examining cat patient with stethoscope", category: "Clinical" },
+  { src: gallery3, thumb: gallery3Thumb, full: gallery3Full, alt: "Surgical procedure at Vet Care Center", category: "Clinical" },
+  { src: gallery6, thumb: gallery6Thumb, full: gallery6Full, alt: "Working with pheasant bird", category: "Wildlife" },
+  { src: gallery7, thumb: gallery7Thumb, full: gallery7Full, alt: "Treating bird patient", category: "Avian" },
 ];
 
 export function GallerySection() {
@@ -66,14 +106,13 @@ export function GallerySection() {
             <div
               key={index}
               className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
-              onClick={() => setSelectedImage(image.src)}
+              onClick={() => setSelectedImage(image.full)}
             >
-              <img
+              <LazyImage
                 src={image.src}
+                placeholderSrc={image.thumb}
                 alt={image.alt}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
