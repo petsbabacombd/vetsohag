@@ -37,6 +37,10 @@ import gallery16 from "@/assets/gallery-16.jpeg?w=400&format=webp";
 import gallery16Thumb from "@/assets/gallery-16.jpeg?w=40&format=webp";
 import gallery17 from "@/assets/gallery-17.jpeg?w=400&format=webp";
 import gallery17Thumb from "@/assets/gallery-17.jpeg?w=40&format=webp";
+import gallery18 from "@/assets/gallery-18.jpeg?w=400&format=webp";
+import gallery18Thumb from "@/assets/gallery-18.jpeg?w=40&format=webp";
+import gallery19 from "@/assets/gallery-19.jpeg?w=400&format=webp";
+import gallery19Thumb from "@/assets/gallery-19.jpeg?w=40&format=webp";
 import profileMain from "@/assets/profile-main.jpeg?w=400&format=webp";
 import profileMainThumb from "@/assets/profile-main.jpeg?w=40&format=webp";
 
@@ -58,11 +62,15 @@ import gallery14Full from "@/assets/gallery-14.jpeg?format=webp";
 import gallery15Full from "@/assets/gallery-15.jpeg?format=webp";
 import gallery16Full from "@/assets/gallery-16.jpeg?format=webp";
 import gallery17Full from "@/assets/gallery-17.jpeg?format=webp";
+import gallery18Full from "@/assets/gallery-18.jpeg?format=webp";
+import gallery19Full from "@/assets/gallery-19.jpeg?format=webp";
 import profileMainFull from "@/assets/profile-main.jpeg?format=webp";
 
 const galleryImages = [
   { src: profileMain, thumb: profileMainThumb, full: profileMainFull, alt: "Dr. Sohag Talukder in surgical scrubs", category: "Clinical" },
   { src: gallery17, thumb: gallery17Thumb, full: gallery17Full, alt: "Dr. Sohag Talukder at histopathology laboratory with microscope", category: "Research" },
+  { src: gallery18, thumb: gallery18Thumb, full: gallery18Full, alt: "Dr. Sohag Talukder holding calico cat at clinic", category: "Clinical" },
+  { src: gallery19, thumb: gallery19Thumb, full: gallery19Full, alt: "Surgical team performing procedure", category: "Surgery" },
   { src: gallery4, thumb: gallery4Thumb, full: gallery4Full, alt: "Veterinary consultation with cat at Vet Care Center", category: "Clinical" },
   { src: gallery8, thumb: gallery8Thumb, full: gallery8Full, alt: "Caring for rabbit patient", category: "Clinical" },
   { src: gallery9, thumb: gallery9Thumb, full: gallery9Full, alt: "Wildlife consultation with peacock", category: "Wildlife" },
