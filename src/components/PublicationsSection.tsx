@@ -2,6 +2,16 @@ import { BookOpen, FileText, Mic, ExternalLink } from "lucide-react";
 
 const journalArticles = [
   {
+    authors: "Talukder S, Akter S, Akanda MR, Siddiqui MSI",
+    year: "2025",
+    title: "The 1–1–1 technique: A modified novel approach to feline ovariohysterectomy with minimal incision, rapid recovery and antibiotic free outcomes",
+    journal: "Veterinary and Animal Science",
+    details: "27: 100428",
+    doi: "https://doi.org/10.1016/j.vas.2025.100428",
+    isFirstAuthor: true,
+    isHighlight: true,
+  },
+  {
     authors: "Talukder S, Islam S, Islam S, Akanda MR, Siddiqui MSI",
     year: "2025",
     title: "Protective Role of Silymarin Against Methotrexate Induced Nephropathy in Rabbits",
@@ -102,6 +112,11 @@ export function PublicationsSection() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
+                      {article.isHighlight && (
+                        <span className="px-2 py-0.5 bg-gradient-to-r from-primary to-accent text-primary-foreground text-xs font-bold rounded shadow-sm">
+                          ⭐ Latest Achievement
+                        </span>
+                      )}
                       {article.isFirstAuthor && (
                         <span className="px-2 py-0.5 bg-accent/10 text-accent text-xs font-semibold rounded">
                           First Author
