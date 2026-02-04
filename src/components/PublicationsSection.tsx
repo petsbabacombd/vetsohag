@@ -2,8 +2,8 @@ import { BookOpen, FileText, Mic, ExternalLink } from "lucide-react";
 
 const journalArticles = [
   {
-    authors: "Talukder S, Akter S, Akanda MR, Siddiqui MSI",
-    year: "2025",
+    authors: "Sohag Talukder, Saiful Islam Siddiqui, Johir Raihan, Jahaidul Islam Jowel, Rupon Islam Shuvo, Saiful Islam, Sultan Ahmed, A.T.M. Mahbub-E-Elahi",
+    year: "2026",
     title: "The 1–1–1 technique: A modified novel approach to feline ovariohysterectomy with minimal incision, rapid recovery and antibiotic free outcomes",
     journal: "Veterinary and Animal Science",
     details: "27: 100428",
