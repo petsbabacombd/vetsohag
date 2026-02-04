@@ -7,7 +7,7 @@ const journalArticles = [
     title: "The 1–1–1 technique: A modified novel approach to feline ovariohysterectomy with minimal incision, rapid recovery and antibiotic free outcomes",
     journal: "Veterinary and Animal Science",
     details: "27: 100428",
-    doi: "https://www.sciencedirect.com/science/article/pii/S2451943X25000073",
+    doi: "https://doi.org/10.1016/j.vas.2026.100582",
     isFirstAuthor: true,
     isHighlight: true,
   },
